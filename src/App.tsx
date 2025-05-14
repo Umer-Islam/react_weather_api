@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import Problem from "./components/Problem";
 
 function App() {
-	const [city, setCity] = useState("tashkent");
+	const [city, setCity] = useState<string>("tashkent");
 	const [data, setData] = useState({
 		location: {
 			name: "London",
@@ -75,7 +75,10 @@ function App() {
 		event.preventDefault();
 		const formData = new FormData(event.currentTarget);
 		const location = formData.get("location");
-		setCity(location);
+		if (typeof location === "string") {
+			setCity(location);
+		}
+
 		// console.log('form submitted value of location is :' + location)
 	}
 
