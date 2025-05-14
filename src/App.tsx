@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import DisplayData from "./components/DisplayData";
+import DisplayData from "./components/displayData";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Problem from "./components/Problem";
